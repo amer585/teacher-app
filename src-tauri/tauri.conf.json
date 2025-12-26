@@ -33,5 +33,12 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://github.com/amer585/teacher-app/releases/latest/download/latest.json"
+      ]
+    }
   }
 }

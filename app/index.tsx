@@ -33,6 +33,10 @@ export default function LandingPage() {
             <HelpModal isOpen={showHelp} onClose={() => setShowHelp(false)} />
 
             <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+                {/* Background Gradient Blobs */}
+                <View className="absolute left-0 top-0 w-96 h-96 bg-blue-500/10 rounded-full" style={{ transform: [{ scale: 1.5 }], filter: 'blur(64px)' }} />
+                <View className="absolute right-0 bottom-0 w-96 h-96 bg-emerald-500/10 rounded-full" style={{ transform: [{ scale: 1.5 }], filter: 'blur(64px)' }} />
+
                 <View className="flex-1 justify-center px-4 py-6 max-w-[1400px] mx-auto w-full">
 
                     {/* Wrapper for Columns - LG row reverse for RTL equivalent */}

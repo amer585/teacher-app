@@ -44,6 +44,19 @@ If you do not do this, `npm run build:windows` will fail.
     npx eas build -p ios
     ```
 
+## ☁️ GitHub & Auto-Updates
+
+**Repository**: [https://github.com/amer585/teacher-app](https://github.com/amer585/teacher-app)
+
+### Setting up Auto-Updates
+The app is configured to check for updates at:
+`https://github.com/amer585/teacher-app/releases/latest/download/latest.json`
+
+To make this work securely, you must:
+1.  **Generate Keys**: Run `npx tauri signer generate -w src-tauri/tauri.conf.json`.
+2.  **Set Secrets**: Add the private key to your environment variables (`TAURI_PRIVATE_KEY`) when building.
+3.  **Release**: When you push a new tag to GitHub, upload the `.msi.zip` and `latest.json` to the Release assets.
+
 ## 📂 Project Structure
 
 - `app/`: Your screens and navigation (Expo Router).
